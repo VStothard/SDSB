@@ -1,0 +1,433 @@
+//VARIABLES********************************/
+
+/*General*/
+
+$media-tab: 980px;
+$media-mob: 840px; /*controls the max-width allocated to media queries*/
+$navbar-height: 50px; /*adjusts the height of the header and the padding-top inside the header-bar so it clears the fixed nav bar*/
+
+/*Color Palette*/
+
+$link-color: white;
+$heading-color: white;
+$paragraph-color: white;
+$primary1: rgba(0,0,0,1); /*black*/
+$primary2: rgba(8,124,167,1); /*medium blue*/
+$primary3: rgba(244,244,249, 1); /*light grey*/
+$primary4: rgba(88,111,124,1); /*grey green-blue*/
+$primary5: rgba(51, 51, 51, 0.5); /*semi-transparent grey*/
+
+
+/*measurements*/
+
+$tabBreak: 769px;
+$deskBreak: 991px;
+
+
+//MIXINS***********************************/
+
+@mixin contactButton {
+	background: rgba(73,155,234,1);
+	background: -moz-linear-gradient(top, rgba(73,155,234,1) 0%, rgba(8,124,167,1) 6%, rgba(8,124,167,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(73,155,234,1)), color-stop(6%, rgba(8,124,167,1)), color-stop(100%, rgba(8,124,167,1)));
+	background: -webkit-linear-gradient(top, rgba(73,155,234,1) 0%, rgba(8,124,167,1) 6%, rgba(8,124,167,1) 100%);
+	background: -o-linear-gradient(top, rgba(73,155,234,1) 0%, rgba(8,124,167,1) 6%, rgba(8,124,167,1) 100%);
+	background: -ms-linear-gradient(top, rgba(73,155,234,1) 0%, rgba(8,124,167,1) 6%, rgba(8,124,167,1) 100%);
+	background: linear-gradient(to bottom, rgba(73,155,234,1) 0%, rgba(8,124,167,1) 6%, rgba(8,124,167,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#087ca7', GradientType=0 );
+	border: none;
+	padding: 20px 30px;
+	border-radius: 15px;
+
+	h3 {
+		padding: 0;
+		margin: 0;
+		text-transform: uppercase;
+	}
+}
+
+
+@mixin infoPageWithHeader {
+
+	.info-cont {
+		background: $primary3;
+
+		.info-header {
+			height: 200px;
+
+			@media screen and (min-width: $tabBreak) {
+				height: 350px;
+			}
+		}
+
+		.info-text {
+			
+			margin: 0;
+			padding: 50px 0px;
+		}
+	}
+}
+
+//GENERAL STYLES***************************/
+
+body {
+	padding-top: $navbar-height;
+	background-color: transparent;
+}
+
+
+//NAVBAR STYLES****************************/
+
+.navbar {
+	border-top: 5px solid $primary2;
+}
+.navbar-toggle {
+	.icon-bar:nth-of-type(2) {
+	  top: 1px;
+	}		
+} 
+
+.navbar-toggle {
+	.icon-bar:nth-of-type(3) {
+  		top: 2px;
+	}
+}
+
+.navbar-toggle { 
+	.icon-bar {
+		  position: relative;
+		  transition: all 500ms ease-in-out;
+	  }
+}
+
+.navbar-toggle.active {
+	.icon-bar:nth-of-type(1) {
+	  top: 6px;
+	  transform: rotate(45deg);
+	  }
+}
+
+.navbar-toggle.active {
+	.icon-bar:nth-of-type(2) {
+	  background-color: transparent;
+	  }
+}
+
+.navbar-toggle.active {
+	.icon-bar:nth-of-type(3) {
+	  top: -6px;
+	  transform: rotate(-45deg);
+	  }
+}
+
+//FOOTER**********************************/
+
+footer {
+	background: $primary4;
+	padding: 10px 0px;
+	color: #999;
+	text-align: center;
+
+	p {
+		padding-top: 5px;
+	}
+
+	.credit {
+		a {
+			text-decoration: none;
+			color: #999;
+		}
+	}
+}
+
+
+
+//HOME STYLES****************************/
+
+.full {
+  background: url('img/superpit.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+//HEADER
+
+.header {
+	//background: $primary5;
+	padding: 15vh 20px;
+	text-align: center;
+	margin-right: 0;
+
+	@media screen and (max-width: $tabBreak) {
+			padding: 0;				
+			}
+
+	.header-box {
+		background: $primary5;
+		padding: 60px;
+		width: 100%;
+		max-width: 710px;
+
+		@media screen and (max-width: $tabBreak) {
+			padding: 100px 15px;
+				
+			}
+
+		h1 {
+			color: $heading-color;
+			text-transform: uppercase;
+			padding: 0;
+			margin: 0;
+			text-align: left;
+		}
+
+		h3 {
+			color: $heading-color;
+			padding: 0;
+			padding-bottom: 20px;
+			margin: 0;
+			text-align: left;
+		}
+
+		p {
+			color: $paragraph-color;
+			text-align: left;
+		}
+
+		button {
+			
+			@include contactButton;
+			margin-top: 40px;
+		}
+	}
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+
+	.col-centered {
+	    display:inline-block;
+	    float:none;
+	    /* reset the text-align */
+	    text-align:left;
+	    /* inline-block space fix */
+	    margin-right:-4px;
+	}
+
+}
+
+//SERVICES
+
+.services {
+	background: $primary2 /*url('img/checkerplatelrg.jpg')*/;
+	background-position: center;
+	padding: 80px 20px;
+
+	.title {
+		color: $heading-color;
+		text-transform: uppercase;
+	}
+
+	.skill {
+		padding: 40px 20px;
+		color: $paragraph-color;
+
+		img {
+			width: 120px;
+		}
+	}
+	
+}
+
+//APPLICATIONS
+
+.applications {
+	background: $primary3;
+
+	.slider {
+		padding: 0;
+	}
+
+	.applications-text {
+		padding: 100px 10px;
+		text-align: center;
+
+		h1 {
+			text-transform: uppercase;
+			padding: 20px 0px;
+		}
+	}
+}
+
+//CONTACT
+
+.contact { 
+	background: $primary5;
+	padding: 100px 0px;
+
+	.contact-img {
+		color: $paragraph-color;
+
+		img {
+			margin-bottom: 10px;
+		}
+	}
+
+
+	.contact-text {
+
+		text-align: left;
+		color: $paragraph-color;
+		padding: 0px 10px;
+
+		h1 {
+			margin-top: 0px;
+			margin-bottom: 20px;
+		}
+
+		a {
+			text-decoration: none;
+			color: $paragraph-color;
+
+			button {
+				@include contactButton;
+
+				margin-top: 40px;
+			}
+		}
+
+		@media screen and (max-width: $deskBreak) {
+			text-align: center;
+			padding: 50px;
+		}
+
+
+	}
+}
+
+
+//ABOUT STYLES****************************/
+
+@include infoPageWithHeader;
+
+.info-cont {
+		.info-header-about {
+			background: url('img/truck.jpg');
+			background-size: cover;
+			background-position: center;
+			}
+}
+
+//SIM STYLES****************************/
+
+@include infoPageWithHeader;
+
+.info-cont {
+		.info-header-sim {
+			background: url('img/ContinuousMiner.jpg');
+			background-size: cover;
+			background-position: center;
+			}
+
+		.info-text-sim {
+
+			.simcon {
+				margin: 20px 0px;
+				img {
+				width: 100%;
+				}
+			}
+		}
+}
+
+
+//SIM STYLES****************************/
+
+@include infoPageWithHeader;
+
+.info-cont {
+		.info-header-pub {
+			background: url('img/ContinuousMiner.jpg');
+			background-size: cover;
+			background-position: center;
+			}
+
+		.info-text-pub {
+			
+		}
+}
+
+//CONTACT STYLES****************************/
+
+.contact-row {
+	padding-top: 50px;
+	min-height: 100vh;
+
+	.contact-title {
+		text-align: center;
+		@media screen and (min-width: $deskBreak) {
+			text-align: left;
+		}
+	}
+
+	.contact-img {
+		margin-top: 50px;
+	}
+
+	.contact-text {
+		margin-top: 50px;
+		text-align: center;
+
+		h1 {
+			margin-top: 0;
+		}
+
+		.icons {
+
+			.contact-email {
+				padding-top: 15px;
+
+				img {
+					width: 30px;
+					float: left;
+				}
+
+				a {
+					float: left;
+					padding-left: 20px;
+				}
+			}
+
+			.contact-phone {
+				padding-top: 15px;
+
+				img {
+					width: 30px;
+					float: left;
+				}
+
+				a {
+					float: left;
+					padding-left: 20px;
+				}
+			}
+		}
+
+		@media screen and (min-width: $deskBreak) {
+			text-align: left;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
