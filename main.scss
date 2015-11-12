@@ -38,6 +38,7 @@ $deskBreak: 991px;
 	border: none;
 	padding: 20px 30px;
 	border-radius: 15px;
+	width: 200px;
 
 	a {
 		padding: 0;
@@ -63,10 +64,9 @@ $deskBreak: 991px;
 			}
 		}
 
-		.info-text {
-			
+		.info-text {			
 			margin: 0;
-			padding: 50px 0px;
+			padding: 50px 10px;
 		}
 	}
 }
@@ -76,6 +76,10 @@ $deskBreak: 991px;
 body {
 	padding-top: $navbar-height;
 	background-color: transparent;
+}
+
+.wrapper {
+	width: 100%;
 }
 
 
@@ -125,7 +129,7 @@ body {
 
 //FOOTER**********************************/
 
-footer {
+.footer {
 	background: $primary4;
 	padding: 10px 0px;
 	color: #999;
@@ -172,16 +176,13 @@ footer {
 //HEADER
 
 .header {
-	//background: $primary5;
-
-	height: 100vh;
-	position:relative;
+	padding: 0px;
+	min-height: 100vh;
 	padding: 15vh 20px;
-	margin-right: 0;
 
 	@media screen and (max-width: $tabBreak) {
-			padding: 0;				
-			}
+		padding: 0;				
+		}
 
 	.header-box {
 		background: $primary5;
@@ -189,10 +190,11 @@ footer {
 		width: 100%;
 		max-width: 710px;
 		text-align: center;
+		margin: 0 auto;
 
 		@media screen and (max-width: $tabBreak) {
 			padding: 100px 25px;
-			height: 100%;
+			min-height: 100vh;
 				
 			}
 
@@ -222,40 +224,29 @@ footer {
 			display: inline-block;
 			margin: 0 auto;
 			margin-top: 40px;
-
-
-			button {
-				
-				@include contactButton;
-
-
-				
-			}
+			@include contactButton;
 		}
 	}
 }
 
+
+
+
 //SERVICES
 
 .services {
-	background: $primary2 /*url('img/checkerplatelrg.jpg')*/;
-	background-position: center;
-	padding: 80px 20px;
-
-	.title {
-		color: $heading-color;
-		text-transform: uppercase;
-	}
-
-	.skill {
-		padding: 40px 20px;
+		background: $primary2;
+		text-align: center;
 		color: $paragraph-color;
+		padding: 80px 10px;
 
-		img {
-			width: 120px;
+		.title {
+			text-transform: uppercase;
 		}
-	}
-	
+
+		.skill {
+			padding: 40px 20px;
+		}
 }
 
 //APPLICATIONS
@@ -280,18 +271,11 @@ footer {
 
 //CONTACT
 
+
+
 .contact { 
 	background: $primary5;
 	padding: 100px 0px;
-
-	.contact-img {
-		color: $paragraph-color;
-
-		img {
-			margin-bottom: 10px;
-		}
-	}
-
 
 	.contact-text {
 
@@ -304,7 +288,7 @@ footer {
 			margin-bottom: 20px;
 		}
 		
-		button {
+		.button-cont {
 			@include contactButton;
 			margin-top: 30px;
 		}
@@ -323,34 +307,22 @@ footer {
 @include infoPageWithHeader;
 
 .info-cont {
-		.info-header-about {
-			background: url('img/truck.jpg');
-			background-size: cover;
-			background-position: center;
-			}
+	.info-header-about {
+		background: url('img/truck.jpg');
+		background-size: cover;
+		background-position: center;
+		}
 }
 
 //SIM STYLES****************************/
 
 @include infoPageWithHeader;
 
-.info-cont {
-		.info-header-sim {
-			background: url('img/ContinuousMiner.jpg');
-			background-size: cover;
-			background-position: center;
-			}
-
-		.info-text-sim {
-
-			.simcon {
-				margin: 20px 0px;
-				img {
-				width: 100%;
-				}
-			}
-		}
-}
+	.info-header-sim {
+		background: url('img/ContinuousMiner.jpg');
+		background-size: cover;
+		background-position: center;
+	}
 
 
 //PUB STYLES****************************/
@@ -365,73 +337,91 @@ footer {
 			}
 
 		.info-text-pub {
+
 			
 		}
 }
 
 //CONTACT STYLES****************************/
 
-.contact-row {
-	padding-top: 50px;
-	min-height: 100vh;
-
-	.contact-title {
-		text-align: center;
-		@media screen and (min-width: $deskBreak) {
-			text-align: left;
-		}
-	}
-
-	.contact-img {
-		margin-top: 50px;
-	}
-
-	.contact-text {
-		margin-top: 50px;
-		text-align: center;
-
-		h1 {
-			margin-top: 0;
-		}
-
-		.icons {
-
-			.contact-email {
-				padding-top: 15px;
-
-				img {
-					width: 30px;
-					float: left;
-				}
-
-				a {
-					float: left;
-					padding-left: 20px;
-				}
+.contact-wrap {
+	background: $primary3;
+	.contact-cont {
+		padding-top: 70px;
+		min-height: 100vh;
+		
+		.profile {
+			@media (min-width: $deskBreak){
+				padding-left: 100px;
+			}
+			
+			h1 {
+				text-align: center;
+				text-transform: uppercase;
+				margin-bottom: 30px;
+				padding-left: 15px;
 			}
 
-			.contact-phone {
-				padding-top: 15px;
-
-				img {
-					width: 30px;
-					float: left;
-				}
-
-				a {
-					float: left;
-					padding-left: 20px;
-				}
+			p {
+				text-align: center;
 			}
 		}
 
-		@media screen and (min-width: $deskBreak) {
-			text-align: left;
+		.details {
+			padding-top: 30px;
+			padding-bottom: 50px;
+			@media (min-width: $deskBreak) {
+					padding-top: 85px;
+				}
+
+			p {
+				text-align: center;
+				
+				@media (min-width: $deskBreak) {
+					text-align: left;
+				}
+			}
+
+			.icons {
+				padding-top: 30px;
+				.email {
+				text-align: center;
+
+				@media (min-width: $deskBreak) {
+					text-align: left;
+				}
+
+				img {
+					width: 30px;
+					display: inline-block;
+				}
+				p{
+					display: inline-block;
+				}
+			}
+			}
+
+			
+
+			.phone {
+				text-align: center;
+
+				@media (min-width: $deskBreak) {
+					text-align: left;
+				}
+
+				img {
+					width: 30px;
+					display: inline-block;
+				}
+				p{
+					display: inline-block;
+				}
+			}
 		}
+		
 	}
 }
-
-
 
 
 
