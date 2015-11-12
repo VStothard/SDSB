@@ -1,2 +1,6 @@
-This project is a copy of the original SDS website, which is now being rebuilt with Bootstrap.
+This project is a copy of the original SDS website, which has now been rebuilt on the Bootstrap framework.
+
+The site has been designed and developed for Simulation Design Services, and is continually being improved to ensure optimum cross browser support, and responsive design across viewing devices. 
+
+Given the high rate of IE usage within the industry, the structure of the site has been developed to cater for its inconsistencies (for example, lack of support for the <button> tag), and will be continually improved over time. 
 
