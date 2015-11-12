@@ -39,10 +39,13 @@ $deskBreak: 991px;
 	padding: 20px 30px;
 	border-radius: 15px;
 
-	h3 {
+	a {
 		padding: 0;
 		margin: 0;
 		text-transform: uppercase;
+		text-decoration: none;
+		color: $paragraph-color;
+		font-size: 25px;
 	}
 }
 
@@ -140,7 +143,20 @@ footer {
 	}
 }
 
+/* centered columns styles */
+.row-centered {
+    text-align:center;
 
+	.col-centered {
+	    display:inline-block;
+	    float:none;
+	    /* reset the text-align */
+	    text-align:left;
+	    /* inline-block space fix */
+	    margin-right:-4px;
+	}
+
+}
 
 //HOME STYLES****************************/
 
@@ -157,8 +173,10 @@ footer {
 
 .header {
 	//background: $primary5;
+
+	height: 100vh;
+	position:relative;
 	padding: 15vh 20px;
-	text-align: center;
 	margin-right: 0;
 
 	@media screen and (max-width: $tabBreak) {
@@ -170,9 +188,11 @@ footer {
 		padding: 60px;
 		width: 100%;
 		max-width: 710px;
+		text-align: center;
 
 		@media screen and (max-width: $tabBreak) {
-			padding: 100px 15px;
+			padding: 100px 25px;
+			height: 100%;
 				
 			}
 
@@ -181,7 +201,8 @@ footer {
 			text-transform: uppercase;
 			padding: 0;
 			margin: 0;
-			text-align: left;
+			margin-bottom: 30px;
+			text-align: center;
 		}
 
 		h3 {
@@ -189,35 +210,29 @@ footer {
 			padding: 0;
 			padding-bottom: 20px;
 			margin: 0;
-			text-align: left;
+			text-align: center;
 		}
 
 		p {
 			color: $paragraph-color;
-			text-align: left;
+			text-align: center;
 		}
 
-		button {
-			
-			@include contactButton;
+		.button-cont {
+			display: inline-block;
+			margin: 0 auto;
 			margin-top: 40px;
+
+
+			button {
+				
+				@include contactButton;
+
+
+				
+			}
 		}
 	}
-}
-
-/* centered columns styles */
-.row-centered {
-    text-align:center;
-
-	.col-centered {
-	    display:inline-block;
-	    float:none;
-	    /* reset the text-align */
-	    text-align:left;
-	    /* inline-block space fix */
-	    margin-right:-4px;
-	}
-
 }
 
 //SERVICES
@@ -280,7 +295,7 @@ footer {
 
 	.contact-text {
 
-		text-align: left;
+		text-align: center;
 		color: $paragraph-color;
 		padding: 0px 10px;
 
@@ -288,20 +303,13 @@ footer {
 			margin-top: 0px;
 			margin-bottom: 20px;
 		}
-
-		a {
-			text-decoration: none;
-			color: $paragraph-color;
-
-			button {
-				@include contactButton;
-
-				margin-top: 40px;
-			}
+		
+		button {
+			@include contactButton;
+			margin-top: 30px;
 		}
 
 		@media screen and (max-width: $deskBreak) {
-			text-align: center;
 			padding: 50px;
 		}
 
@@ -345,13 +353,13 @@ footer {
 }
 
 
-//SIM STYLES****************************/
+//PUB STYLES****************************/
 
 @include infoPageWithHeader;
 
 .info-cont {
 		.info-header-pub {
-			background: url('img/ContinuousMiner.jpg');
+			background: url('img/ContinuousMiner01.jpg');
 			background-size: cover;
 			background-position: center;
 			}

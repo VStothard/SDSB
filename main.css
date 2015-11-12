@@ -47,61 +47,6 @@ footer {
     text-decoration: none;
     color: #999; }
 
-.full {
-  background: url("img/superpit.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
-.header {
-  padding: 15vh 20px;
-  text-align: center;
-  margin-right: 0; }
-  @media screen and (max-width: 769px) {
-    .header {
-      padding: 0; } }
-  .header .header-box {
-    background: rgba(51, 51, 51, 0.5);
-    padding: 60px;
-    width: 100%;
-    max-width: 710px; }
-    @media screen and (max-width: 769px) {
-      .header .header-box {
-        padding: 100px 15px; } }
-    .header .header-box h1 {
-      color: white;
-      text-transform: uppercase;
-      padding: 0;
-      margin: 0;
-      text-align: left; }
-    .header .header-box h3 {
-      color: white;
-      padding: 0;
-      padding-bottom: 20px;
-      margin: 0;
-      text-align: left; }
-    .header .header-box p {
-      color: white;
-      text-align: left; }
-    .header .header-box button {
-      background: #499bea;
-      background: -moz-linear-gradient(top, #499bea 0%, #087ca7 6%, #087ca7 100%);
-      background: -webkit-gradient(left top, left bottom, color-stop(0%, #499bea), color-stop(6%, #087ca7), color-stop(100%, #087ca7));
-      background: -webkit-linear-gradient(top, #499bea 0%, #087ca7 6%, #087ca7 100%);
-      background: -o-linear-gradient(top, #499bea 0%, #087ca7 6%, #087ca7 100%);
-      background: -ms-linear-gradient(top, #499bea 0%, #087ca7 6%, #087ca7 100%);
-      background: linear-gradient(to bottom, #499bea 0%, #087ca7 6%, #087ca7 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#087ca7', GradientType=0 );
-      border: none;
-      padding: 20px 30px;
-      border-radius: 15px;
-      margin-top: 40px; }
-      .header .header-box button h3 {
-        padding: 0;
-        margin: 0;
-        text-transform: uppercase; }
-
 /* centered columns styles */
 .row-centered {
   text-align: center; }
@@ -112,6 +57,71 @@ footer {
     text-align: left;
     /* inline-block space fix */
     margin-right: -4px; }
+
+.full {
+  background: url("img/superpit.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.header {
+  height: 100vh;
+  position: relative;
+  padding: 15vh 20px;
+  margin-right: 0; }
+  @media screen and (max-width: 769px) {
+    .header {
+      padding: 0; } }
+  .header .header-box {
+    background: rgba(51, 51, 51, 0.5);
+    padding: 60px;
+    width: 100%;
+    max-width: 710px;
+    text-align: center; }
+    @media screen and (max-width: 769px) {
+      .header .header-box {
+        padding: 100px 25px;
+        height: 100%; } }
+    .header .header-box h1 {
+      color: white;
+      text-transform: uppercase;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 30px;
+      text-align: center; }
+    .header .header-box h3 {
+      color: white;
+      padding: 0;
+      padding-bottom: 20px;
+      margin: 0;
+      text-align: center; }
+    .header .header-box p {
+      color: white;
+      text-align: center; }
+    .header .header-box .button-cont {
+      display: inline-block;
+      margin: 0 auto;
+      margin-top: 40px; }
+      .header .header-box .button-cont button {
+        background: #499bea;
+        background: -moz-linear-gradient(top, #499bea 0%, #087ca7 6%, #087ca7 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, #499bea), color-stop(6%, #087ca7), color-stop(100%, #087ca7));
+        background: -webkit-linear-gradient(top, #499bea 0%, #087ca7 6%, #087ca7 100%);
+        background: -o-linear-gradient(top, #499bea 0%, #087ca7 6%, #087ca7 100%);
+        background: -ms-linear-gradient(top, #499bea 0%, #087ca7 6%, #087ca7 100%);
+        background: linear-gradient(to bottom, #499bea 0%, #087ca7 6%, #087ca7 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#087ca7', GradientType=0 );
+        border: none;
+        padding: 20px 30px;
+        border-radius: 15px; }
+        .header .header-box .button-cont button a {
+          padding: 0;
+          margin: 0;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: white;
+          font-size: 25px; }
 
 .services {
   background: #087ca7;
@@ -145,35 +155,34 @@ footer {
     .contact .contact-img img {
       margin-bottom: 10px; }
   .contact .contact-text {
-    text-align: left;
+    text-align: center;
     color: white;
     padding: 0px 10px; }
     .contact .contact-text h1 {
       margin-top: 0px;
       margin-bottom: 20px; }
-    .contact .contact-text a {
-      text-decoration: none;
-      color: white; }
-      .contact .contact-text a button {
-        background: #499bea;
-        background: -moz-linear-gradient(top, #499bea 0%, #087ca7 6%, #087ca7 100%);
-        background: -webkit-gradient(left top, left bottom, color-stop(0%, #499bea), color-stop(6%, #087ca7), color-stop(100%, #087ca7));
-        background: -webkit-linear-gradient(top, #499bea 0%, #087ca7 6%, #087ca7 100%);
-        background: -o-linear-gradient(top, #499bea 0%, #087ca7 6%, #087ca7 100%);
-        background: -ms-linear-gradient(top, #499bea 0%, #087ca7 6%, #087ca7 100%);
-        background: linear-gradient(to bottom, #499bea 0%, #087ca7 6%, #087ca7 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#087ca7', GradientType=0 );
-        border: none;
-        padding: 20px 30px;
-        border-radius: 15px;
-        margin-top: 40px; }
-        .contact .contact-text a button h3 {
-          padding: 0;
-          margin: 0;
-          text-transform: uppercase; }
+    .contact .contact-text button {
+      background: #499bea;
+      background: -moz-linear-gradient(top, #499bea 0%, #087ca7 6%, #087ca7 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, #499bea), color-stop(6%, #087ca7), color-stop(100%, #087ca7));
+      background: -webkit-linear-gradient(top, #499bea 0%, #087ca7 6%, #087ca7 100%);
+      background: -o-linear-gradient(top, #499bea 0%, #087ca7 6%, #087ca7 100%);
+      background: -ms-linear-gradient(top, #499bea 0%, #087ca7 6%, #087ca7 100%);
+      background: linear-gradient(to bottom, #499bea 0%, #087ca7 6%, #087ca7 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#087ca7', GradientType=0 );
+      border: none;
+      padding: 20px 30px;
+      border-radius: 15px;
+      margin-top: 30px; }
+      .contact .contact-text button a {
+        padding: 0;
+        margin: 0;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+        font-size: 25px; }
     @media screen and (max-width: 991px) {
       .contact .contact-text {
-        text-align: center;
         padding: 50px; } }
 
 .info-cont {
@@ -224,7 +233,7 @@ footer {
     padding: 50px 0px; }
 
 .info-cont .info-header-pub {
-  background: url("img/ContinuousMiner.jpg");
+  background: url("img/ContinuousMiner01.jpg");
   background-size: cover;
   background-position: center; }
 
