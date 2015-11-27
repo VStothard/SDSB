@@ -1,8 +1,12 @@
 $(document).ready(function () {
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
 
-	//make name bar display none (CSS) then on scroll, show it
+	    var target = this.hash;
+	    var $target = $(target);
 
-			  $(".navbar-toggle").on("click", function () {
-				    $(this).toggleClass("active");
-			  });
-		});
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing');
+	});
+});
