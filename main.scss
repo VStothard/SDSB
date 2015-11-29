@@ -15,7 +15,7 @@ $primary1: rgba(0,0,0,1); /*black*/
 $primary2: rgba(8,124,167,1); /*medium blue*/
 $primary3: rgba(244,244,249, 1); /*light grey*/
 $primary4: rgba(88,111,124,1); /*grey green-blue*/
-$primary5: rgba(51, 51, 51, 0.5); /*semi-transparent grey*/
+$primary5: rgba(51, 51, 51, 0.7); /*semi-transparent grey*/
 
 
 /*measurements*/
@@ -87,6 +87,32 @@ body {
 
 .navbar {
 	border-top: 5px solid $primary2;
+	background-color: black;
+
+	.navbar-header {
+
+	}
+
+	.nav-links {
+
+		.nav-logo {
+			width: 80px;
+			display: inline-block;
+			float: right;
+			padding: 5px;
+			margin-right: 10px;
+
+			@media screen and (max-width: 810px) {
+				display: none;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	
 }
 .navbar-toggle {
 	.icon-bar:nth-of-type(2) {
@@ -337,6 +363,15 @@ body {
 		background-position: center;
 	}
 
+	.ben {
+		background-color: $primary2;
+		color: white;
+		position: relative;
+		top: 50%;
+		right: 0;
+		//translate-y: (-50%);
+	}
+
 
 //PUB STYLES****************************/
 
@@ -445,12 +480,13 @@ body {
 
 	.services-intro {
 		padding-top: 50px;
-		padding-bottom: 25px;
+		padding-bottom: 50px;
 	}
 
 	.service {
-		padding-top: 25px;
-		padding-bottom: 25px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		border-top: #DBDBDB 1px solid;
 
 		.img-box {
 			margin: 30px 0px;
@@ -488,6 +524,32 @@ body {
 					padding: 15px 0px 0px 0px;
 				}
 			}	
+		}
+
+		.text-box {
+			height: 100%;
+			padding: 0px;
+			padding-right: 15px;
+		}
+
+		.col-left {
+			padding-right: 25px;
+
+		}
+		.col-right {
+			padding-left: 25px;
+		}
+
+		.quote-box {
+			background: $primary2;
+			padding: 30px;
+			color: white;
+			font-weight: 900;
+
+			img { 
+				width: 100%;
+				margin-bottom: 30px;
+			}
 		}
 	}
 }
