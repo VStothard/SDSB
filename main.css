@@ -16,7 +16,19 @@ body {
   width: 100%; }
 
 .navbar {
-  border-top: 5px solid #087ca7; }
+  border-top: 5px solid #087ca7;
+  background-color: black; }
+  .navbar .nav-links .nav-logo {
+    width: 80px;
+    display: inline-block;
+    float: right;
+    padding: 5px;
+    margin-right: 10px; }
+    @media screen and (max-width: 810px) {
+      .navbar .nav-links .nav-logo {
+        display: none; } }
+    .navbar .nav-links .nav-logo img {
+      width: 100%; }
 
 .navbar-toggle .icon-bar:nth-of-type(2) {
   top: 1px; }
@@ -76,7 +88,7 @@ body {
     .header {
       padding: 0; } }
   .header .header-box {
-    background: rgba(51, 51, 51, 0.5);
+    background: rgba(51, 51, 51, 0.7);
     padding: 60px;
     width: 100%;
     max-width: 710px;
@@ -154,7 +166,7 @@ body {
       padding: 20px 0px; }
 
 .contact {
-  background: rgba(51, 51, 51, 0.5);
+  background: rgba(51, 51, 51, 0.7);
   padding: 100px 0px; }
   .contact .contact-text {
     text-align: center;
@@ -219,6 +231,13 @@ body {
   background: url("img/ContinuousMiner.jpg");
   background-size: cover;
   background-position: center; }
+
+.ben {
+  background-color: #087ca7;
+  color: white;
+  position: relative;
+  top: 50%;
+  right: 0; }
 
 .info-cont {
   background: #f4f4f9; }
@@ -289,10 +308,11 @@ body {
   padding-bottom: 100px; }
   .services-container .services-intro {
     padding-top: 50px;
-    padding-bottom: 25px; }
+    padding-bottom: 50px; }
   .services-container .service {
-    padding-top: 25px;
-    padding-bottom: 25px; }
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: #DBDBDB 1px solid; }
     .services-container .service .img-box {
       margin: 30px 0px;
       text-align: center; }
@@ -314,5 +334,21 @@ body {
         padding: 15px 15px 0px 15px; }
         .services-container .service .img-box-align p {
           padding: 15px 0px 0px 0px; } }
+    .services-container .service .text-box {
+      height: 100%;
+      padding: 0px;
+      padding-right: 15px; }
+    .services-container .service .col-left {
+      padding-right: 25px; }
+    .services-container .service .col-right {
+      padding-left: 25px; }
+    .services-container .service .quote-box {
+      background: #087ca7;
+      padding: 30px;
+      color: white;
+      font-weight: 900; }
+      .services-container .service .quote-box img {
+        width: 100%;
+        margin-bottom: 30px; }
 
 /*# sourceMappingURL=main.css.map */
